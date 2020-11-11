@@ -15,8 +15,8 @@ Hate speech is defined as: public speech that expresses hate or en- courages vio
 
 | Dataset | Label (Count)                                     |
 | :-----: | :-----------------------------------------------: | 
-| [WZ] (DBLP:conf/acl-alw/ParkF17)      | hate (3,435) non-hate (9,767)                     |
-| DT      | hate (1,430) offensive (19,190) beither (4,163)   |
+| [WZ] (https://www.aclweb.org/anthology/W17-3006.pdf)      | hate (3,435) non-hate (9,767)                     |
+| [DT] (https://arxiv.org/pdf/1703.04009.pdf)      | hate (1,430) offensive (19,190) beither (4,163)   |
 | FOUNTA  | hate (3,907) abusive (19,232) spam (13,840) normal (53,011)      |  
 
 ## Reference  
@@ -31,6 +31,19 @@ Referred paper:
                2017},
   pages     = {41--45},
   publisher = {Association for Computational Linguistics},
+  year      = {2017}
+}
+
+@inproceedings{DBLP:conf/icwsm/DavidsonWMW17,
+  author    = {Thomas Davidson and
+               Dana Warmsley and
+               Michael W. Macy and
+               Ingmar Weber},
+  title     = {Automated Hate Speech Detection and the Problem of Offensive Language},
+  booktitle = {Proceedings of the Eleventh International Conference on Web and Social
+               Media, {ICWSM} 2017},
+  pages     = {512--515},
+  publisher = {{AAAI} Press},
   year      = {2017}
 }
 ```
