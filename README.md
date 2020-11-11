@@ -12,7 +12,7 @@ Hate speech is defined as: public speech that expresses hate or en- courages vio
 - Pytorch 1.6.0
 
 ## Data for Training HateGAN
-Datasets are provided in the folder named as **data**. For each dataset, we provide two versions of it: the raw data and the split dataset (split into 5-folders randomly).
+Datasets are provided in the folder named as ** data **. For each dataset, we provide two versions of it: the raw data and the split dataset (split into 5-folders randomly).
 
 | Dataset | Label (Count)                                     |
 | :-----: | :-----------------------------------------------: | 
