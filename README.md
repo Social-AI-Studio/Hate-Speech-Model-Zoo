@@ -15,7 +15,7 @@ Hate speech is defined as: public speech that expresses hate or en- courages vio
 
 | Dataset | Label (Count)                                     |
 | :-----: | :-----------------------------------------------: | 
-| WZ [DBLP:conf/acl-alw/ParkF17]      | hate (3,435) non-hate (9,767)                     |
+| [WZ] (DBLP:conf/acl-alw/ParkF17)      | hate (3,435) non-hate (9,767)                     |
 | DT      | hate (1,430) offensive (19,190) beither (4,163)   |
 | FOUNTA  | hate (3,907) abusive (19,232) spam (13,840) normal (53,011)      |  
 
