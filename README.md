@@ -32,7 +32,8 @@ Here is the current list of models currently implemented in the project:
 
 ## Existing Problems 
 
-- **Imbalance of datasets**: Most existing datasets for hate speech detection are highly imbalanced as there are fewer hate texts compared with other classes. One solution is to do data augmentation. However, it is expensive and time-consuming. A few pieces of work have tried some automantic methods of data augmentation. 
+- **Imbalance of datasets**: Most existing datasets for hate speech detection are highly imbalanced as there are fewer hate texts compared with other classes. One solution is to do data augmentation. However, it is expensive and time-consuming. A few pieces of work have tried some automantic methods of data augmentation.   
+
 - **Bias of Models **: Since models are trained on an imbalanced dataset, they suffers from the problem of biased prediction. The problem of bias is visualized and code is shared under the folder of **vis-bias**. In order to solve the problem, [Bert+SOC](Contextualizing Hate Speech Classifiers with Post-hoc Explanation) has been used for debias in hate speech detection by adding the regularization term.
 
 ## Citation
