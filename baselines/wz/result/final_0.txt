@@ -1,49 +1,49 @@
 validation folder 1
-	eval score: 91.50 
+	eval score: 100.00 
 	eval precision: 100.00 
-	eval recall: 91.50 
-	eval f1: 95.56 
+	eval recall: 100.00 
+	eval f1: 100.00 
 	eval macro precision: 100.00 
-	eval macro recall: 92.00 
-	eval macro f1: 96.00 
+	eval macro recall: 100.00 
+	eval macro f1: 100.00 
 validation folder 2
-	eval score: 99.50 
+	eval score: 100.00 
 	eval precision: 100.00 
-	eval recall: 99.50 
-	eval f1: 99.75 
+	eval recall: 100.00 
+	eval f1: 100.00 
 	eval macro precision: 100.00 
-	eval macro recall: 99.00 
+	eval macro recall: 100.00 
 	eval macro f1: 100.00 
 validation folder 3
-	eval score: 97.00 
+	eval score: 100.00 
 	eval precision: 100.00 
-	eval recall: 97.00 
-	eval f1: 98.48 
+	eval recall: 100.00 
+	eval f1: 100.00 
 	eval macro precision: 100.00 
-	eval macro recall: 97.00 
-	eval macro f1: 98.00 
+	eval macro recall: 100.00 
+	eval macro f1: 100.00 
 validation folder 4
-	eval score: 99.50 
+	eval score: 100.00 
 	eval precision: 100.00 
-	eval recall: 99.50 
-	eval f1: 99.75 
+	eval recall: 100.00 
+	eval f1: 100.00 
 	eval macro precision: 100.00 
-	eval macro recall: 99.00 
+	eval macro recall: 100.00 
 	eval macro f1: 100.00 
 validation folder 5
-	eval score: 99.50 
+	eval score: 100.00 
 	eval precision: 100.00 
-	eval recall: 99.50 
-	eval f1: 99.75 
+	eval recall: 100.00 
+	eval f1: 100.00 
 	eval macro precision: 100.00 
-	eval macro recall: 99.00 
+	eval macro recall: 100.00 
 	eval macro f1: 100.00 
 
  final result
-	eval score: 97.40 
+	eval score: 100.00 
 	eval precision: 100.00 
-	eval recall: 97.40 
-	eval f1: 98.66 
+	eval recall: 100.00 
+	eval f1: 100.00 
 	eval hate precision: 100.00 
-	eval hate recall: 97.20 
-	eval hate f1: 98.80 
+	eval hate recall: 100.00 
+	eval hate f1: 100.00 

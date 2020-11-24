@@ -86,14 +86,15 @@ def train_for_deep(test_set,model,opt,train_set,folder):
         eval_loss=0
         eval_score=0.0
         t=time.time()
-        for i,(bert,basic,masks,labels,sent) in enumerate(train_loader):
+        for i,(bert,basic,masks,labels,sent,char) in enumerate(train_loader):
             if opt.MODEL=='BERT':
                 bert=bert.cuda()
                 masks=masks.cuda()
                 pred=model(bert,token_type_ids=None,attention_mask=masks)[0]
             else:
+                char=char.cuda()
                 basic=basic.cuda()
-                pred=model(basic)
+                pred=model(basic,char)
                 
             labels=labels.float().cuda()
             loss=bce_for_loss(pred,labels)
@@ -148,15 +149,16 @@ def evaluate_for_offensive(model,test_loader,opt,epoch,folder):
     acc=0.0
     total_num=len(test_loader.dataset)
     print ('The length of the loader is:',len(test_loader.dataset))
-    for i,(bert,basic,masks,labels,sent) in enumerate(test_loader):
+    for i,(bert,basic,masks,labels,sent,char) in enumerate(test_loader):
         with torch.no_grad():
             if opt.MODEL=='BERT':
                 bert=bert.cuda()
                 masks=masks.cuda()
                 pred=model(bert,token_type_ids=None,attention_mask=masks)[0]
-            else:
+            elif opt.MODEL=='HYBRID':
                 basic=basic.cuda()
-                pred=model(basic)
+                char=char.cuda()
+                pred=model(basic,char)
             labels=labels.float().cuda()
         batch_score=compute_score(pred,labels)
         batch_loss=bce_for_loss(pred,labels)

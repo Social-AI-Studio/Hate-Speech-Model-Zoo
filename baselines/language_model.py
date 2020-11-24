@@ -27,4 +27,15 @@ class Word_Embedding(nn.Module):
         emb=self.dropout(emb)
         return emb
 
+class Char_Embedding(nn.Module):
+    def __init__(self,emb_dim,dropout):
+        super(Char_Embedding,self).__init__()
+        self.emb=nn.Embedding(27,emb_dim,padding_idx=26)
+        self.dropout=nn.Dropout(dropout)
+        self.emb_dim=emb_dim
+        
+    def forward(self,x):
+        emb=self.emb(x)
+        emb=self.dropout(emb)
+        return emb
         

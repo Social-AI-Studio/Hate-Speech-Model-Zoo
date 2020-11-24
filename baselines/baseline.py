@@ -5,8 +5,8 @@ import numpy as np
 import torch.nn.functional as F
 from transformers import BertForSequenceClassification,BertConfig
 
-from full_rnn import Part_RNN
-from language_model import Word_Embedding
+from full_rnn import Part_RNN, CNN_Model, CNN_GRU, Hybrid_CNN
+from language_model import Word_Embedding, Char_Embedding
 from classifier import SimpleClassifier,SingleClassifier
 
 class Deep_Basic(nn.Module):
@@ -17,9 +17,15 @@ class Deep_Basic(nn.Module):
         self.fc=fc
         self.encoder=encoder
         
-    def forward(self,basic):
-        w_emb=self.w_emb(basic)
-        repre=self.encoder(w_emb)
+        self.model=opt.MODEL
+        
+    def forward(self,basic,char):
+        if self.model=='HYBRID':
+            w_emb=self.w_emb(basic)
+            repre=self.encoder(w_emb,char)
+        else:
+            w_emb=self.w_emb(basic)
+            repre=self.encoder(w_emb)
         logits=self.fc(repre)
         
         return logits 
@@ -49,6 +55,23 @@ def build_baseline(ntokens,emb_dir,opt):
     if opt.MODEL=='LSTM':
         encoder=Part_RNN(opt.EMB_DIM,opt.NUM_HIDDEN,opt.NUM_LAYER,opt.BIDIRECT,opt.L_RNN_DROPOUT)
         fc=SimpleClassifier(opt.NUM_HIDDEN,opt.MID_DIM,final_dim,opt.FC_DROPOUT)
+    elif opt.MODEL=='CNN':
+        encoder=CNN_Model(opt.EMB_DIM,opt.FILTER_SIZE,opt.NUM_FILTER)
+        fc=SimpleClassifier(opt.NUM_FILTER * len(opt.FILTER_SIZE.split(',')),
+                            opt.MID_DIM,final_dim,opt.FC_DROPOUT)
+    elif opt.MODEL=='CNNGRU':
+        gru=Part_RNN(opt.NUM_FILTER,opt.NUM_HIDDEN,opt.NUM_LAYER, 
+                     opt.BIDIRECT,opt.L_RNN_DROPOUT,rnn_type='GRU')
+        encoder=CNN_GRU(opt.EMB_DIM,opt.CG_FILTER_SIZE,opt.NUM_FILTER,opt.FC_DROPOUT,gru)
+        fc=SimpleClassifier(opt.NUM_HIDDEN,opt.MID_DIM,final_dim,opt.FC_DROPOUT)
+    elif opt.MODEL=='HYBRID':
+        c_emb=Char_Embedding(opt.EMB_DIM,opt.EMB_DROPOUT) 
+        w_cnn=CNN_Model(opt.EMB_DIM,opt.W_FILTER_SIZE,opt.NUM_FILTER)
+        c_cnn=CNN_Model(opt.EMB_DIM,opt.C_FILTER_SIZE,opt.NUM_FILTER)
+        encoder=Hybrid_CNN(c_emb,w_cnn,c_cnn,opt.FC_DROPOUT)
+        fc=SimpleClassifier(
+            opt.NUM_FILTER * (len(opt.W_FILTER_SIZE.split(','))+len(opt.C_FILTER_SIZE.split(','))),
+            opt.MID_DIM,final_dim,opt.FC_DROPOUT)
     return Deep_Basic(w_emb,encoder,fc,opt)
     
     

@@ -31,6 +31,7 @@ def parse_opt():
     parser.add_argument('--DATASET',type=str,default='wz')
     parser.add_argument('--CREATE_DICT',type=bool,default=False)
     parser.add_argument('--CREATE_EMB',type=bool,default=False)
+    parser.add_argument('--DEBUG',type=bool,default=False)
     
     #hyper parameters
     parser.add_argument('--BATCH_SIZE',type=int,default=128)
@@ -41,10 +42,20 @@ def parse_opt():
     parser.add_argument('--EMB_DROPOUT',type=float,default=0.5)
     parser.add_argument('--FC_DROPOUT',type=float,default=0.5) 
     parser.add_argument('--MID_DIM',type=int,default=512)
+    #LSTM
     parser.add_argument('--NUM_HIDDEN',type=int,default=1024)
     parser.add_argument('--NUM_LAYER',type=int,default=1)
     parser.add_argument('--BIDIRECT',type=bool,default=False)
     parser.add_argument('--L_RNN_DROPOUT',type=float,default=0.3)
-    
+    #CNN
+    parser.add_argument('--NUM_FILTER',type=int,default=150)
+    parser.add_argument('--FILTER_SIZE',type=str,default="2,3,4")
+    #CNN-GRU
+    parser.add_argument('--CG_FILTER_SIZE',type=str,default="4")
+    parser.add_argument('--GRU_HIDDEN',type=int,default=128)
+    #Hybrid CNN
+    parser.add_argument('--W_FILTER_SIZE',type=str,default="1,2,3")
+    parser.add_argument('--C_FILTER_SIZE',type=str,default="3,4,5")
+    parser.add_argument('--CHAR_LENGTH',type=int,default=64)
     args=parser.parse_args()
     return args

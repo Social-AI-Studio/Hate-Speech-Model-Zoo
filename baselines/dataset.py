@@ -27,7 +27,10 @@ class Wraped_Data():
         elif self.opt.DATASET=='founta':
             self.classes=4
         
-        self.entries=self.load_tr_val_entries()[:200]
+        if opt.DEBUG:
+            self.entries=self.load_tr_val_entries()[:200]
+        else:
+            self.entries=self.load_tr_val_entries()
         
         self.tokenize()
         self.tensorize()
@@ -50,7 +53,7 @@ class Wraped_Data():
             label=info['label']
             entry={
                 'bert':sent,
-                'text':info['sent'],
+                'text':info['sent'].lower(),
                 'answer':label
             }
             entries.append(entry)
@@ -71,6 +74,14 @@ class Wraped_Data():
         else:
             tokens=tokens[:length]
         return tokens
+    
+    def padding_char(self,tokens,length):
+        if len(tokens)<length:
+            padding=[26]*(length-len(tokens))
+            tokens=padding+tokens
+        else:
+            tokens=tokens[:length]
+        return tokens
    
     def matching(self,text):
         tokens=text.split(' ')
@@ -81,10 +92,21 @@ class Wraped_Data():
             else:
                 token_num.append(self.word2idx['UNK'])
         return token_num
+    
+    def char_matching(self,chars):
+        token_num=[]
+        for c in chars:
+            t=ord(c)-97
+            if t>=26 or t<0:
+                token_num.append(26)
+            else:
+                token_num.append(t)
+        return token_num
 
     def tokenize(self):
         print('Tokenize Tweets...')
         length=self.opt.LENGTH
+        char_length=self.opt.CHAR_LENGTH
         for entry in tqdm(self.entries):
             tokens=entry['bert']
             pad_tokens=self.padding_sent_bert(tokens,length)
@@ -96,12 +118,18 @@ class Wraped_Data():
             pad_tokens=self.padding_sent_basic(tokens,length)
             entry['basic_tokens']=np.array((pad_tokens),dtype=np.int64)
             
+            chars=list(''.join(entry['text'].split(' ')))
+            char_tokens=self.char_matching(chars)
+            pad_tokens=self.padding_char(char_tokens,char_length)
+            entry['char']=np.array((pad_tokens),dtype=np.int64)
+            
     def tensorize(self):
         print ('Tesnsorize all Information...')
         count=0
         for entry in tqdm(self.entries):
             entry['bert_tokens']=torch.from_numpy(entry['bert_tokens'])
             entry['basic_tokens']=torch.from_numpy(entry['basic_tokens'])
+            entry['char']=torch.from_numpy(entry['char'])
             target=torch.from_numpy(np.zeros((self.classes),dtype=np.float32))
             target[entry['answer']]=1.0
             entry['label']=target
@@ -114,7 +142,8 @@ class Wraped_Data():
         label=entry['label']
         masks=entry['masks']
         sent=entry['text']
-        return bert,basic,masks,label,sent
+        char=entry['char']
+        return bert,basic,masks,label,sent,char
         
         
     def __len__(self):

@@ -1,4 +1,4 @@
-MODEL : BERT
+MODEL : HYBRID
 DT_RESULT : ./dt/result
 DT_DATA : ./dt/dictionary
 WZ_RESULT : ./wz/result
@@ -27,12 +27,19 @@ NUM_HIDDEN : 1024
 NUM_LAYER : 1
 BIDIRECT : False
 L_RNN_DROPOUT : 0.3
-epoch 0, time: 1.37
-	train_loss: 0.02, accuracy: 41.00
-	eval accuracy: 99.50 
-	eval f1: 99.75 
+NUM_FILTER : 150
+FILTER_SIZE : 2,3,4
+CG_FILTER_SIZE : 4
+GRU_HIDDEN : 128
+W_FILTER_SIZE : 1,2,3
+C_FILTER_SIZE : 3,4,5
+CHAR_LENGTH : 64
+epoch 0, time: 0.38
+	train_loss: 0.01, accuracy: 58.00
+	eval accuracy: 100.00 
+	eval f1: 100.00 
 	eval precision: 100.00 
-	eval recall: 99.50 
+	eval recall: 100.00 
 	eval macro f1: 100.00 
 	eval macro precision: 100.00 
-	eval macro recall: 99.00 
+	eval macro recall: 100.00 
