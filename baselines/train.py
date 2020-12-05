@@ -155,7 +155,7 @@ def evaluate_for_offensive(model,test_loader,opt,epoch,folder):
                 bert=bert.cuda()
                 masks=masks.cuda()
                 pred=model(bert,token_type_ids=None,attention_mask=masks)[0]
-            elif opt.MODEL=='HYBRID':
+            else:
                 basic=basic.cuda()
                 char=char.cuda()
                 pred=model(basic,char)

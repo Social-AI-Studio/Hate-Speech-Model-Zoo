@@ -1,49 +1,49 @@
 validation folder 1
-	eval score: 100.00 
-	eval precision: 100.00 
-	eval recall: 100.00 
-	eval f1: 100.00 
+	eval score: 78.10 
+	eval precision: 77.74 
+	eval recall: 78.10 
+	eval f1: 72.79 
 	eval macro precision: 100.00 
-	eval macro recall: 100.00 
-	eval macro f1: 100.00 
+	eval macro recall: 67.00 
+	eval macro f1: 80.00 
 validation folder 2
-	eval score: 100.00 
-	eval precision: 100.00 
-	eval recall: 100.00 
-	eval f1: 100.00 
-	eval macro precision: 100.00 
-	eval macro recall: 100.00 
-	eval macro f1: 100.00 
+	eval score: 76.97 
+	eval precision: 76.58 
+	eval recall: 76.97 
+	eval f1: 73.01 
+	eval macro precision: 98.00 
+	eval macro recall: 53.00 
+	eval macro f1: 69.00 
 validation folder 3
-	eval score: 100.00 
-	eval precision: 100.00 
-	eval recall: 100.00 
-	eval f1: 100.00 
-	eval macro precision: 100.00 
-	eval macro recall: 100.00 
-	eval macro f1: 100.00 
+	eval score: 81.44 
+	eval precision: 83.46 
+	eval recall: 81.44 
+	eval f1: 78.75 
+	eval macro precision: 98.00 
+	eval macro recall: 58.00 
+	eval macro f1: 73.00 
 validation folder 4
-	eval score: 100.00 
-	eval precision: 100.00 
-	eval recall: 100.00 
-	eval f1: 100.00 
-	eval macro precision: 100.00 
-	eval macro recall: 100.00 
-	eval macro f1: 100.00 
+	eval score: 69.52 
+	eval precision: 83.65 
+	eval recall: 69.52 
+	eval f1: 73.16 
+	eval macro precision: 28.00 
+	eval macro recall: 80.00 
+	eval macro f1: 42.00 
 validation folder 5
-	eval score: 100.00 
-	eval precision: 100.00 
-	eval recall: 100.00 
-	eval f1: 100.00 
-	eval macro precision: 100.00 
-	eval macro recall: 100.00 
-	eval macro f1: 100.00 
+	eval score: 78.48 
+	eval precision: 79.28 
+	eval recall: 78.48 
+	eval f1: 78.73 
+	eval macro precision: 57.00 
+	eval macro recall: 59.00 
+	eval macro f1: 58.00 
 
  final result
-	eval score: 100.00 
-	eval precision: 100.00 
-	eval recall: 100.00 
-	eval f1: 100.00 
-	eval hate precision: 100.00 
-	eval hate recall: 100.00 
-	eval hate f1: 100.00 
+	eval score: 76.90 
+	eval precision: 80.14 
+	eval recall: 76.90 
+	eval f1: 75.29 
+	eval hate precision: 76.20 
+	eval hate recall: 63.40 
+	eval hate f1: 64.40 
