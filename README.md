@@ -11,7 +11,7 @@ Hate speech is defined as: public speech that expresses hate or en- courages vio
 - Python 3.6.9
 - Pytorch 1.6.0
 
-## Data for Training HateGAN
+## Data for Hate Speech Detection
 Datasets are provided in the folder named as **data**. For each dataset, we provide data which has been preprocessed and split into 5-folders. For raw data, please refer to their original project.
 
 | Dataset | Label (Count)                                     |
