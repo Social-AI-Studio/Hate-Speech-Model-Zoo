@@ -29,8 +29,8 @@ def parse_opt():
     parser.add_argument('--EMB_DIM',type=int,default=300)
     #dt for DT, fouta for FOUNTA, wz for WZ
     parser.add_argument('--DATASET',type=str,default='wz')
-    parser.add_argument('--CREATE_DICT',type=bool,default=False)
-    parser.add_argument('--CREATE_EMB',type=bool,default=False)
+    parser.add_argument('--CREATE_DICT',type=bool,default=True)
+    parser.add_argument('--CREATE_EMB',type=bool,default=True)
     parser.add_argument('--DEBUG',type=bool,default=False)
     
     #hyper parameters

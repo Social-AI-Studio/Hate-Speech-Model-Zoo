@@ -1,0 +1,91 @@
+MODEL : LSTM
+DT_RESULT : ./dt/result
+DT_DATA : ./dt/dictionary
+WZ_RESULT : ./wz/result
+WZ_DATA : ./wz/dictionary
+FOUNTA_RESULT : ./founta/result
+FOUNTA_DATA : ./founta/dictionary
+SPLIT_DATASET : ../dataset/split_data
+GLOVE_PATH : /home/ruicao/trained/embeddings/glove.6B.300d.txt
+SEED : 1111
+CUDA_DEVICE : 0
+TEST_NUM : 0
+SAVE_NUM : 0
+CROSS_VAL : 5
+EMB_DIM : 300
+DATASET : wz
+CREATE_DICT : True
+CREATE_EMB : True
+DEBUG : False
+BATCH_SIZE : 128
+LENGTH : 64
+EPOCHS : 6
+MIN_OCC : 3
+EMB_DROPOUT : 0.5
+FC_DROPOUT : 0.5
+MID_DIM : 512
+NUM_HIDDEN : 1024
+NUM_LAYER : 1
+BIDIRECT : False
+L_RNN_DROPOUT : 0.3
+NUM_FILTER : 150
+FILTER_SIZE : 2,3,4
+CG_FILTER_SIZE : 4
+GRU_HIDDEN : 128
+W_FILTER_SIZE : 1,2,3
+C_FILTER_SIZE : 3,4,5
+CHAR_LENGTH : 64
+epoch 0, time: 4.66
+	train_loss: 0.01, accuracy: 73.72
+	eval accuracy: 77.54 
+	eval f1: 77.64 
+	eval precision: 77.79 
+	eval recall: 77.54 
+	eval macro f1: 59.00 
+	eval macro precision: 56.00 
+	eval macro recall: 62.00 
+epoch 1, time: 4.68
+	train_loss: 0.01, accuracy: 80.19
+	eval accuracy: 76.70 
+	eval f1: 77.14 
+	eval precision: 77.98 
+	eval recall: 76.70 
+	eval macro f1: 58.00 
+	eval macro precision: 54.00 
+	eval macro recall: 63.00 
+epoch 2, time: 4.68
+	train_loss: 0.01, accuracy: 81.58
+	eval accuracy: 77.29 
+	eval f1: 77.66 
+	eval precision: 78.49 
+	eval recall: 77.29 
+	eval macro f1: 59.00 
+	eval macro precision: 57.00 
+	eval macro recall: 60.00 
+epoch 3, time: 4.70
+	train_loss: 0.01, accuracy: 82.55
+	eval accuracy: 74.37 
+	eval f1: 75.25 
+	eval precision: 79.00 
+	eval recall: 74.37 
+	eval macro f1: 60.00 
+	eval macro precision: 55.00 
+	eval macro recall: 66.00 
+epoch 4, time: 4.61
+	train_loss: 0.01, accuracy: 83.14
+	eval accuracy: 73.69 
+	eval f1: 74.64 
+	eval precision: 78.92 
+	eval recall: 73.69 
+	eval macro f1: 60.00 
+	eval macro precision: 55.00 
+	eval macro recall: 65.00 
+epoch 5, time: 4.65
+	train_loss: 0.01, accuracy: 84.09
+	eval accuracy: 78.48 
+	eval f1: 78.73 
+	eval precision: 79.28 
+	eval recall: 78.48 
+	eval macro f1: 58.00 
+	eval macro precision: 57.00 
+	eval macro recall: 59.00 

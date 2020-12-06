@@ -24,7 +24,7 @@ if __name__=='__main__':
         dict_path=os.path.join(opt.WZ_DATA,'dictionary.pkl')
         glove_path=os.path.join(opt.WZ_DATA,'glove.npy')
     elif opt.DATASET=='dt':
-        logger=utils.Logger(os.path.join(opt.DT_FULL_RESULT,'final_'+str(opt.SAVE_NUM)+'.txt'))
+        logger=utils.Logger(os.path.join(opt.DT_RESULT,'final_'+str(opt.SAVE_NUM)+'.txt'))
         dict_path=os.path.join(opt.DT_DATA,'dictionary.pkl')
         glove_path=os.path.join(opt.DT_DATA,'glove.npy')
     elif opt.DATASET=='founta':

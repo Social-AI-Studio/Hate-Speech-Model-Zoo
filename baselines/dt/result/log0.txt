@@ -1,0 +1,55 @@
+MODEL : CNN
+DT_RESULT : ./dt/result
+DT_DATA : ./dt/dictionary
+WZ_RESULT : ./wz/result
+WZ_DATA : ./wz/dictionary
+FOUNTA_RESULT : ./founta/result
+FOUNTA_DATA : ./founta/dictionary
+SPLIT_DATASET : ../dataset/split_data
+GLOVE_PATH : /home/ruicao/trained/embeddings/glove.6B.300d.txt
+SEED : 1111
+CUDA_DEVICE : 0
+TEST_NUM : 0
+SAVE_NUM : 0
+CROSS_VAL : 5
+EMB_DIM : 300
+DATASET : dt
+CREATE_DICT : True
+CREATE_EMB : True
+DEBUG : False
+BATCH_SIZE : 128
+LENGTH : 64
+EPOCHS : 6
+MIN_OCC : 3
+EMB_DROPOUT : 0.5
+FC_DROPOUT : 0.5
+MID_DIM : 512
+NUM_HIDDEN : 1024
+NUM_LAYER : 1
+BIDIRECT : False
+L_RNN_DROPOUT : 0.3
+NUM_FILTER : 150
+FILTER_SIZE : 2,3,4
+CG_FILTER_SIZE : 4
+GRU_HIDDEN : 128
+W_FILTER_SIZE : 1,2,3
+C_FILTER_SIZE : 3,4,5
+CHAR_LENGTH : 64
+epoch 0, time: 2.84
+	train_loss: 0.01, accuracy: 85.82
+	eval accuracy: 86.72 
+	eval f1: 84.27 
+	eval precision: 87.61 
+	eval recall: 86.72 
+	eval macro f1: 1.00 
+	eval macro precision: 100.00 
+	eval macro recall: 1.00 
+epoch 1, time: 2.83
+	train_loss: 0.00, accuracy: 89.05
+	eval accuracy: 87.23 
+	eval f1: 87.06 
+	eval precision: 86.94 
+	eval recall: 87.23 
+	eval macro f1: 41.00 
+	eval macro precision: 44.00 
+	eval macro recall: 37.00 
