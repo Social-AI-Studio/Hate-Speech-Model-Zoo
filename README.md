@@ -16,7 +16,7 @@ Datasets are provided in the folder named as **data**. For each dataset, we prov
 
 | Dataset | Label (Count)                                     |
 | :-----: | :-----------------------------------------------: | 
-| [WZ](https://www.aclweb.org/anthology/W17-3006.pdf)      | hate (3,435) non-hate (9,767)                     |
+| [WZ](https://www.aclweb.org/anthology/W17-3006.pdf)      | racism (1,923) sexism (3,079) neither (11,033)                     |
 | [DT](https://arxiv.org/pdf/1703.04009.pdf)      | hate (1,430) offensive (19,190) beither (4,163)   |
 | [FOUNTA](https://arxiv.org/pdf/1802.00393.pdf)  | hate (3,907) abusive (19,232) spam (13,840) normal (53,011)      |  
 
@@ -33,16 +33,19 @@ Here is the current list of models currently implemented in the project:
 ## Existing Problems 
 Most recent models for hate speech are supervised and highly rely on annotated datasets. As a consequence, the quality of datasets affects the performance of models. However, most of the datasets are imbalanced. To be more specific, hate tweets are fewer compared with tweets in other classes. There are two main solutions: 1) data augmentation 2) debias of models.
 
-- **Data Augmentation**: Adding more data is the most straightforward way to solve the problem of imbalance of datasets. [Rizos et al., 2019](https://www.researchgate.net/publication/337018946_Augment_to_Prevent_Short-Text_Data_Augmentation_in_Deep_Learning_for_Hate-Speech_Classification) tried substitution and swapping words of original tweets for augmentation. They are detrimental to the fluency of sentences. They also tried to generate tweets with pretrained language model, however, ignoring attributes of hate tweets. [HateGAN](https://underline.io/lecture/5756-1379---hategan-model-data-augmentation-for-hate-speech-detection-%E2%80%8B) is a deep generative reinforcement learning model, which addresses the problem of imbalance by augmenting the dataset with hateful tweets.  
+- **Data Augmentation**: Adding more data is the most straightforward way to solve the problem of imbalance of datasets. [Rizos et al., 2019](https://www.researchgate.net/publication/337018946_Augment_to_Prevent_Short-Text_Data_Augmentation_in_Deep_Learning_for_Hate-Speech_Classification) tried substitution and swapping words of original tweets for augmentation. They are detrimental to the fluency of sentences. They also tried to generate tweets with pretrained language model, however, ignoring attributes of hate tweets. [HateGAN](https://www.aclweb.org/anthology/2020.coling-main.557.pdf) is a deep generative reinforcement learning model, which addresses the problem of imbalance by augmenting the dataset with hateful tweets.  
 
 - **Debias of Models**: Since models are trained on an imbalanced dataset, they suffers from the problem of biased prediction. The problem of bias is visualized and code is shared under the folder of **bias**. In order to solve the problem, [Bert+SOC](https://www.aclweb.org/anthology/2020.acl-main.483/) has been used for debias in hate speech detection by adding the regularization term.
 
 ## Citation
 If you use our codes in your project, please cite:
+
+### To cite 
 ```
-@misc{asonam2020hsp,
-  title =        {Hate Speech Detection Tutorial, ASONAM 2020},
-  howpublished = {\url{https://gitlab.com/bottle_shop/safe/hate-speech-model-zoo}},
-  year =         {2020}
+@article{lee2020tutorial,
+  title={Perils and Promises of Automated Hate Speech Detection},
+  author={Lee, Roy Ka-Wei and Cao, Rui},
+  journal={arXiv preprint},
+  year={2020}
 }
 ```
