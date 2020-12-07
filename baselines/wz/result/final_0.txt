@@ -1,0 +1,16 @@
+validation folder 1
+	eval score: 80.09 
+	eval precision: 77.83 
+	eval recall: 80.09 
+	eval f1: 77.82 
+	eval macro precision: 97.00 
+	eval macro recall: 86.00 
+	eval macro f1: 91.00 
+validation folder 2
+	eval score: 79.78 
+	eval precision: 77.66 
+	eval recall: 79.78 
+	eval f1: 77.99 
+	eval macro precision: 85.00 
+	eval macro recall: 83.00 
+	eval macro f1: 84.00 

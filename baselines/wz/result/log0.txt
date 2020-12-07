@@ -1,4 +1,4 @@
-MODEL : HYBRID
+MODEL : CNNGRU
 DT_RESULT : ./dt/result
 DT_DATA : ./dt/dictionary
 WZ_RESULT : ./wz/result
@@ -35,12 +35,30 @@ GRU_HIDDEN : 128
 W_FILTER_SIZE : 1,2,3
 C_FILTER_SIZE : 3,4,5
 CHAR_LENGTH : 64
-epoch 0, time: 2.93
-	train_loss: 0.01, accuracy: 74.40
-	eval accuracy: 76.19 
-	eval f1: 68.28 
-	eval precision: 70.02 
-	eval recall: 76.19 
-	eval macro f1: 76.00 
-	eval macro precision: 100.00 
-	eval macro recall: 62.00 
+epoch 0, time: 3.92
+	train_loss: 0.01, accuracy: 69.73
+	eval accuracy: 67.43 
+	eval f1: 68.53 
+	eval precision: 72.58 
+	eval recall: 67.43 
+	eval macro f1: 59.00 
+	eval macro precision: 44.00 
+	eval macro recall: 91.00 
+epoch 1, time: 3.98
+	train_loss: 0.01, accuracy: 78.42
+	eval accuracy: 80.19 
+	eval f1: 78.08 
+	eval precision: 80.24 
+	eval recall: 80.19 
+	eval macro f1: 74.00 
+	eval macro precision: 63.00 
+	eval macro recall: 88.00 
+epoch 2, time: 3.83
+	train_loss: 0.01, accuracy: 80.40
+	eval accuracy: 80.25 
+	eval f1: 77.76 
+	eval precision: 80.79 
+	eval recall: 80.25 
+	eval macro f1: 72.00 
+	eval macro precision: 97.00 
+	eval macro recall: 57.00 
