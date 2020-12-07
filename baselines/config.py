@@ -4,7 +4,7 @@ def parse_opt():
     parser=argparse.ArgumentParser()
     
     #all models are named using capitals 
-    parser.add_argument('--MODEL',type=str,default='LSTM')
+    parser.add_argument('--MODEL',type=str,default='CNN')
     
     '''path configuration'''
     #path for pre-precessing and result saving

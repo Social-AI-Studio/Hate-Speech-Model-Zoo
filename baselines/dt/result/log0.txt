@@ -35,7 +35,7 @@ GRU_HIDDEN : 128
 W_FILTER_SIZE : 1,2,3
 C_FILTER_SIZE : 3,4,5
 CHAR_LENGTH : 64
-epoch 0, time: 2.84
+epoch 0, time: 2.95
 	train_loss: 0.01, accuracy: 85.82
 	eval accuracy: 86.72 
 	eval f1: 84.27 
@@ -44,7 +44,7 @@ epoch 0, time: 2.84
 	eval macro f1: 1.00 
 	eval macro precision: 100.00 
 	eval macro recall: 1.00 
-epoch 1, time: 2.83
+epoch 1, time: 2.93
 	train_loss: 0.00, accuracy: 89.05
 	eval accuracy: 87.23 
 	eval f1: 87.06 
