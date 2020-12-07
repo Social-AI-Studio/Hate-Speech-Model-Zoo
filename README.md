@@ -16,7 +16,7 @@ Datasets are provided in the folder named as **data**. For each dataset, we prov
 
 | Dataset | Label (Count)                                     |
 | :-----: | :-----------------------------------------------: | 
-| [WZ](https://www.aclweb.org/anthology/W17-3006.pdf)      | hate (3,435) non-hate (9,767)                     |
+| [WZ](https://www.aclweb.org/anthology/W17-3006.pdf)      | racism (1,923) sexism (3,079) neither (11,033)                     |
 | [DT](https://arxiv.org/pdf/1703.04009.pdf)      | hate (1,430) offensive (19,190) beither (4,163)   |
 | [FOUNTA](https://arxiv.org/pdf/1802.00393.pdf)  | hate (3,907) abusive (19,232) spam (13,840) normal (53,011)      |  
 
