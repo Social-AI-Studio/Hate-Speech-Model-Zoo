@@ -39,10 +39,13 @@ Most recent models for hate speech are supervised and highly rely on annotated d
 
 ## Citation
 If you use our codes in your project, please cite:
+
+### To cite 
 ```
-@misc{asonam2020hsp,
-  title =        {Hate Speech Detection Tutorial, ASONAM 2020},
-  howpublished = {\url{https://gitlab.com/bottle_shop/safe/hate-speech-model-zoo}},
-  year =         {2020}
+@article{awal2020analyzing,
+  title={Perils and Promises of Automated Hate Speech Detection},
+  author={Lee, Roy Ka-Wei and Cao, Rui},
+  journal={arXiv preprint},
+  year={2020}
 }
 ```
