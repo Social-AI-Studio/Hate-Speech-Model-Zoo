@@ -32,6 +32,7 @@
 -  [The Hateful Memes Challenge: Detecting Hate Speech in Multimodal Memes](https://arxiv.org/pdf/2005.04790.pdf)(Arvix'20)
 -  ["Go eat a bat, Chang!": An Early Look on the Emergence of Sinophobic Behavior on Web Communities in the Face of COVID-19](https://arxiv.org/abs/2004.04046)(Arvix'20)
 -  [Deep Learning Based Fusion Approach for Hate Speech Detection](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9139953) (IEEE Access'20)
+-  [Constructing interval variables via faceted Rasch measurement and multitask deep learning: a hate speech application](https://arxiv.org/abs/2009.10277) (Arvix'20)
 
 
 **Data Sources**
