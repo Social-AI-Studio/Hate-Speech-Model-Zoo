@@ -42,7 +42,7 @@ If you use our codes in your project, please cite:
 
 ### To cite 
 ```
-@article{awal2020analyzing,
+@article{lee2020tutorial,
   title={Perils and Promises of Automated Hate Speech Detection},
   author={Lee, Roy Ka-Wei and Cao, Rui},
   journal={arXiv preprint},
